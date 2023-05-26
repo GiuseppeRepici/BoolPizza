@@ -9,6 +9,6 @@ class PizzaController extends Controller
 {
     public function index() {
         $Pizzas = Pizza::all();
-        return view('welcome', compact('Pizzas'));
+        return view('home', compact('Pizzas'));
     }
 }

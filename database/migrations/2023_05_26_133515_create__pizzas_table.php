@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('_pizzas', function (Blueprint $table) {
+        Schema::create('pizzas', function (Blueprint $table) {
             $table->id();
             $table->string('name', 20);
-            $table->string('type',20);
+            $table->string('type', 20);
             $table->string('ingredients');
-            $table->decimal('price',4,2);
+            $table->decimal('price', 4, 2);
             $table->timestamps();
         });
     }

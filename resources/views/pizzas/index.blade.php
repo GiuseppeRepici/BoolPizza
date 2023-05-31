@@ -12,6 +12,7 @@
                                 <p class="card-text">Tipologia: {{ $Pizza->type }}</p>
                                 <p class="card-text">Ingredienti: {{ $Pizza->ingredients }}</p>
                                 <p class="card-text">Prezzo: {{ $Pizza->price }} €</p>
+                                <a href="{{route('pizzas.show',$Pizza->id)}}">vedi dettagli</a>
                             </div>
                         </div>
                     </div>

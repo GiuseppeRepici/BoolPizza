@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PizzaController;
+use App\Http\Controllers\ResourceController;
 use App\Models\Pizza;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PizzaController::class,'index']);
+Route::resource('pizzas', ResourceController::class);

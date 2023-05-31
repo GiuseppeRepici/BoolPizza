@@ -25,7 +25,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('pizzas.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $Pizza = new Pizza();
+        $Pizza->fill($data);
+        $Pizza->save();
+        return redirect()->route('pizzas.index');
     }
 
     /**

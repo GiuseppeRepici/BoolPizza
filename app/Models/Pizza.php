@@ -9,4 +9,5 @@ class Pizza extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $fillable = ['name', 'type', 'ingredients', 'price'];
 }

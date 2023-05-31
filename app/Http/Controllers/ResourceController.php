@@ -47,7 +47,8 @@ class ResourceController extends Controller
      */
     public function show($id)
     {
-        //
+        $Pizza=Pizza::findOrFail($id);
+        return view('pizzas.show',compact('Pizza'));
     }
 
     /**

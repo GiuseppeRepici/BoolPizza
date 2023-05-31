@@ -47,8 +47,8 @@ class ResourceController extends Controller
      */
     public function show($id)
     {
-        $Pizza=Pizza::findOrFail($id);
-        return view('pizzas.show',compact('Pizza'));
+        $Pizza = Pizza::findOrFail($id);
+        return view('pizzas.show', compact('Pizza'));
     }
 
     /**
@@ -59,7 +59,8 @@ class ResourceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Pizza = Pizza::findOrFail($id);
+        return view('pizzas.edit', compact('Pizza'));
     }
 
     /**
@@ -71,7 +72,10 @@ class ResourceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $Pizza = Pizza::findOrFail($id);
+        $Pizza->update($data);
+        return redirect()->route('pizzas.index');
     }
 
     /**

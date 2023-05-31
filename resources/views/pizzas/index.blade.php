@@ -15,6 +15,13 @@
                                 <p class="card-text">Ingredienti: {{ $Pizza->ingredients }}</p>
                                 <p class="card-text">Prezzo: {{ $Pizza->price }} €</p>
                                 <a href="{{ route('pizzas.show', $Pizza->id) }}">vedi dettagli</a>
+
+                                <form action="{{ route('pizzas.destroy', $Pizza->id) }}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="btn btn-danger" onclick="return confirmDelete()"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -22,4 +29,9 @@
             </div>
         </div>
     </div>
+    <script>
+        function confirmDelete() {
+            return confirm('Sei sicuro di voler eliminare questo elemento?');
+        }
+    </script>
 @endsection

@@ -90,6 +90,8 @@ class ResourceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Pizza = Pizza::findOrFail($id);
+        $Pizza->delete();
+        return redirect()->route('pizzas.index');
     }
 }

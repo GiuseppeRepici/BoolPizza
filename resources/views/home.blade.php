@@ -3,6 +3,7 @@
     <div class="wrapper">
         <h1 class="text-center py-3">Lista delle Pizze</h1>
         <div class="container">
+            <a href="{{ route('pizzas.index') }}" class="btn btn-success">Pizza-Plus</a>
             <div class="row d-flex">
                 @foreach ($Pizzas as $Pizza)
                     <div class="col-3">
@@ -17,6 +18,7 @@
                     </div>
                 @endforeach
             </div>
+
         </div>
     </div>
 @endsection

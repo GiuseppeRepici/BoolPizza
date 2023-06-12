@@ -4,7 +4,8 @@
         <h1 class="text-center py-3">Lista delle Pizze</h1>
 
         <div class="container overflow-y">
-            <a href="{{ route('pizzas.create') }}">Aggiungi una pizza</a>
+            <a href="{{ route('home') }}" class="btn btn-warning"><i class="fa-solid fa-left-long"></i></a>
+            <a href="{{ route('pizzas.create') }}" class="btn btn-success">Aggiungi una pizza</a>
             <div class="row d-flex">
                 <table class="table">
                     <thead>

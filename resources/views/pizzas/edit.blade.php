@@ -6,20 +6,20 @@
             @method('PUT')
             @csrf
             <div class="form-group">
-                <label for="name">Nome Pizza</label>
+                <label for="name" style="color: white;">Nome Pizza</label>
                 <input type="text" name="name" value="{{ $Pizza->name }}" class="form-control" id="name">
             </div>
             <div class="form-group">
-                <label for="type">Tipo Pizza</label>
+                <label for="type" style="color: white;">Tipo Pizza</label>
                 <input type="text" name="type" value="{{ $Pizza->type }}" class="form-control" id="type">
             </div>
             <div class="form-group">
-                <label for="ingredients">Ingredienti</label>
+                <label for="ingredients" style="color: white;">Ingredienti</label>
                 <input type="text" name="ingredients" value="{{ $Pizza->ingredients }}" class="form-control"
                     id="ingredients">
             </div>
             <div class="form-group">
-                <label for="price">Prezzo</label>
+                <label for="price" style="color: white;">Prezzo</label>
                 <input type="number" min="0.00" max="99.99" step="0.01" name="price"
                     value="{{ $Pizza->price }}" class="form-control" id="price">
             </div>
